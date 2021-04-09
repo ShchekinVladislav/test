@@ -1,8 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+import {MainServiceService} from "./service/main-service.service";
+
+import {ChartsModule} from "ng2-charts";
+
 
 @NgModule({
   declarations: [
@@ -10,9 +16,12 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChartsModule
   ],
-  providers: [],
+  providers: [
+      MainServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
